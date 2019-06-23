@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		// console.log(screen.width,screen.height);
+		// console.log(screen.availWidth,screen.availHeight);
+
+		// history示例
+		function getLength(){
+			console.log(history.length);
+		}
+
+		//location示例
+
+	</script>
+</head>
+<body>
+	<h1><a href="#">Index</a></h1>
+	<button onclick="getLength()">获取length</button>
+	<button onclick="history.forward()">前进</button>
+	<button onclick="history.back()">后退</button>
+	<button onclick="history.go(1)">Go前进</button>
+	<button onclick="history.go(-1)">Go后退</button>
+
+	<button onclick="console.log(location.href);">获取当前url</button>
+	<button onclick="location.href='http://www.tmooc.cn';">达内</button>
+	<button onclick="location.reload(true)">重新加载</button>
+
+	<button onclick="console.log(navigator);">navigator</button>
+	<button onclick="console.log(navigator.userAgent);">navigator.userAgent</button>
+</body>
+</html>

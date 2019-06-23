@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		// 判断闰年
+		// var input = prompt("请输入年份");
+		// var res = (input % 400 == 0) || ( input % 100 != 0 && input % 4 == 0)
+		// console.log(input+"是闰年吗？"+res);
+
+		// 判断用户输入的数据类型
+		var input = prompt('请输入一个字符');
+		var isNum = 0 <= input && input <= 9;
+		console.log("输入的"+input+"是数字吗？"+ isNum);
+
+		var isCHN = input >= "\u4e00" && input <= "\u9fa5";
+		console.log(input+"是中文吗？"+ isCHN);
+
+		var isCAPS = "A" <= input && input <= "Z"; 
+		var isSmal = "a" <=input && input <="z";
+		var isEng = isCAPS || isSmal;
+		console.log(input+"是英文吗？"+ isEng);
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script src="jQuery/jquery-1.11.3.js"></script>
+</head>
+<body>
+	<h1>《登鹳雀楼》</h1>
+	<h2>王之涣</h2>
+	<p id="p1">白日依山尽</p>
+	<p class="c1">黄河入海流</p>
+	<p class="c2">欲穷千里目</p>
+	<p id="p2">更上一层楼</p>
+	<hr>
+	<h1>《静夜思》</h1>
+	<h2>李白</h2>
+	<p class="a2">床前明月光</p>
+	<p class="c1">疑是地上霜</p>
+	<p class="b2a">举头望明月</p>
+	<p>低头思故乡</p>
+	<script type="text/javascript">
+		$("[id]").css("font-size","32px");
+		$("[id=p1]").css("color","red");
+		$("[id!=p1]").css("color","green");
+		$("[class^=c]").css("background","yellow");
+		$("[class$=1]").css("background","pink");
+		$("[class*=2]").css("background","orange");
+	</script>
+</body>
+</html>

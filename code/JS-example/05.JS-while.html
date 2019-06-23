@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		// var i = 0;
+		// while(i < 100){
+		// 	console.log("我爱python");
+		// 	i ++;
+		// }
+		
+		// var i = 0;
+		// while(i<100){
+		// 	++i
+		// 	if (i % 3 ==0)console.log(i);
+		// }
+
+		// do{
+		// 	var input = prompt('请输入,输入exit,退出');
+		// 	if(input != "exit")console.log(input);
+		// }while(input != "exit");	
+
+		var year = prompt('输入年');
+		var month = prompt("输入月");
+		var day = Number(prompt('输入日'));
+		var days = day;
+		var i = 1;
+		var isRun = year % 100 != 0 && year % 4 == 0 || year %400 == 0;
+		// 循环体中是month-1个月的天数进行累加
+		while(i < month){
+			switch(i){
+				case 1:
+				case 3:
+				case 5:
+				case 7:
+				case 8:
+				case 10:
+					days += 31;
+					break;
+				case 4:
+				case 6:
+				case 9:
+				case 11:
+					days += 30;
+					break;
+				case 2:
+					days += 28;
+					if (isRun) days++;
+					break;
+			}
+			i ++;
+		}
+		console.log(days);
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script src="jQuery/jquery-1.11.3.js"></script>
+	<style type="text/css">
+		.c1{
+			width: 200px;
+			height: 200px;
+			border: 1px solid red;
+		}	
+		.c2{
+			color: blue;
+			font-size: 24px;
+		}
+	</style>
+</head>
+<body>
+	<h1>jQuery样式操作</h1>
+	<p>切换样式</p>
+	<button onclick="changeStyle()">切换</button>
+	<script type="text/javascript">
+		$('h1').addClass('c1').addClass('c2');
+		// $('h1').removeClass('c1');
+		$('h1').removeClass();
+		function changeStyle(){
+			$('p').toggleClass('c2');
+		}
+	</script>
+</body>
+</html>

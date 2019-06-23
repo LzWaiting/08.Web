@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script src="jQuery/jquery-1.11.3.js"></script>
+	<style type="text/css">
+		#box{
+			width: 600px;
+			height: 300px;
+			border: 1px solid red;
+		}
+		.c1{
+			color: blue;
+			font-size: 18px;
+			text-align: left;
+		}
+	</style>
+</head>
+<body>
+	<span></span>
+	<input type="text" name="" id="uname">
+	<button onclick="showTitle()">显示</button>
+	
+	<div>
+		<h1></h1>
+		<h3></h3>
+		<p></p>
+	</div>	
+
+	<script type="text/javascript">
+		function showTitle(){
+			$("span").html("<h1>"+$("#uname").val()+"</h1>");
+		}
+
+		// 链式调用，永远返回当前的jQuery对象
+		$('h1').html("西游记").css("text-align","center").attr('id','#bookName');
+		$('h3').html('<strong>吴承恩</strong').css('text-align','center');
+		$('p').text('话说500年前，花果山有一顽石，乃女娲补天所遗之石，经年累月，在日月精华的哺育之下，渐有灵性。一日紫气东方，乍现惊鸿，尽在晴天里一声巨雷，只见那灵石幻化成一只石猴，活过将来。');
+		$('div').attr("id","box");
+		$('p').attr("class","c1")
+	</script>
+</body>
+</html>

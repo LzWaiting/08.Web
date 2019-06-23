@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		#redBack{
+			background-color: pink;
+			text-align: center;
+		}
+		.blueTextP{
+			color: blue;
+		}
+	</style>
+</head>
+<body>
+	<h1>动态修改元素样式</h1>
+	<div>div文本</div>
+</body>
+<script type="text/javascript">
+	var tagH1 = document.getElementsByTagName("h1")[0];
+	var tagDiv1 = document.getElementsByTagName("div")[0];
+	tagH1.id = "redBack";
+	tagH1.className = "blueTextP";
+
+	tagDiv1.style.background = "red"; 
+	tagDiv1.style.width = "200px";
+	tagDiv1.style.height = "200px";
+	tagDiv1.style.textAlign = "center";
+	tagDiv1.style.lineHeight = "200px";
+	tagDiv1.style.color = "yellow"; 
+</script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		// 1. 成绩判定
+		// var score = prompt("请输入成绩");
+		// var grade = score < 60 ? "不及格" : (score < 80 ? "及格" : (score < 90 ? "良好" : "优秀")); 
+		// console.log(grade); 
+
+		// 2. BMI 身体指数计算
+		var uheight = prompt("输入身高/m");
+		var uweight = prompt("输入体重/Kg");
+		var bmi = uweight / (uheight * uheight);
+		// 保留小数点后两位
+		bmi = bmi.toFixed(2); 
+		var BMI = bmi <= 18.5 ? "偏瘦":(bmi >= 23.9 ? "偏胖":"健康");
+		console.log(BMI);
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

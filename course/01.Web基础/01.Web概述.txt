@@ -1,0 +1,57 @@
+Web 包括 HTML、CSS、Javascript
+
+Web 概述
+	1. 什么是Web?
+		Web 就是网页，是一种基于B/S的应用程序
+			B/S	(如PC端)
+				B:Browser	浏览器
+				S:Server	服务器
+
+			C/S (如手机端)
+				C:Client	客户端
+				S:Server	服务器
+
+	2. Web 组成
+		浏览器：代替用户向服务器发送请求
+		服务器：接收用户请求并响应
+		通信协议：规范数据在网络中是如何打包即传递的
+			http协议：超文本传输协议
+				HyperText transfer protocal
+			https协议：加密
+			...
+
+	3. Web 服务器
+		作用：
+			1. 接收用户请求并响应
+			2. 存储Web信息
+			3. 具备安全性功能
+		产品：
+			1. Apache
+			2. Tomcat
+			3. IIS - Internet Infomation Service
+			4. Nginx
+			...
+		技术：
+			1. JSP - Java Server Page
+			2. PHP
+			3. ASP.net
+			4. Python Web (Django Flask ...)
+
+	4. Web 浏览器
+		作用：
+			1. 代替用户向服务器发送请求
+			2. 作为响应数据的解释引擎，向用户呈现界面
+		主流浏览器产品
+			根据浏览器的内核/引擎进行划分
+				1. Microsoft	IE
+				2. Google		Chrome
+				3. Mozilla		FireFox
+				4. Apple		Safari
+				5. Opera		Opera
+				浏览器引擎
+					1. 渲染引擎
+						解析HTML、CSS,控制页面的渲染效果
+					2. JS引擎
+						解释网页脚本文件
+		前端开发技术
+			HTML CSS JavaScript

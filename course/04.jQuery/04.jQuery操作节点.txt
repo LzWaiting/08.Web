@@ -1,0 +1,14 @@
+jQuery 操作节点
+	1. children() / children('selector')
+		表示获取某个jQuery对象下所有的子元素，或者获取带有指定选择器的子元素
+		注意：只考虑直接子元素，不考虑间接后代元素
+	2. next() / next('selector')
+		获取某个jQuery对象的下一个兄弟元素，或者满足selector的下一个兄弟元素
+	3. prev() / prev('selector')
+		获取某个jQuery对象的上一个兄弟元素，或者满足selector的上一个兄弟元素
+	4. siblings() / siblings('selector')
+		获取某个jQuery对象的所有兄弟元素，或者满足selector的兄弟元素
+	5. find('selector')
+		获取满足selector的所有后代元素
+	6. parent()
+		获取jQuery对象的父元素

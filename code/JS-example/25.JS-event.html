@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		div{
+			width: 200px;
+			height: 200px;
+			background-color: red;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload = function(){
+			var div = document.getElementsByTagName("div")[0];
+			div.onmouseover = function(evt){
+				//接收事件对象并输出
+				console.log(evt);
+				console.log(evt.offsetX,evt.offsetY);
+				console.log(evt.clientX,evt.clientY);
+				console.log(evt.screenX,evt.screenY);
+			};
+			div.onmousemove = function(event){
+				//输出事件源
+				//鼠标坐标信息
+			};
+		};
+	</script>
+</head>
+<body>
+	<div></div>
+</body>
+</html>

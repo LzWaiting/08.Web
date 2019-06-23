@@ -1,0 +1,96 @@
+/*统一设置页面样式*/
+body{
+	font: 12px 'Microsoft Yahei','黑体',sans-serif;
+	color: #464646;
+}
+body,h1,h2,h3,h4,h5,h6,p,ul,ol{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#baiduHomePage{
+	margin: 0 auto;
+	width: 100%;
+}
+#nav{
+	position: relative;
+	height: 50px;
+}
+#nav .head{
+	position: absolute;
+	right: 0px;
+	height: 24px;
+	width: 480px;
+	margin-top: 20px;
+	line-height: 24px;
+	font-weight: bold;
+}
+#nav .head>a{
+	position: relative;
+	margin-left: 19px;
+	color: black;
+}
+#nav .head>a:hover{
+	color: blue;
+}
+#nav .head>.spanLogin,.spanSet{
+	font-weight: normal;
+}
+#nav .head>.baiduMore{
+	background: #3385ff;
+	color: #fff;
+	width: 60px;
+	text-decoration: none;
+	display: inline-block;
+	text-align: center;
+}
+#main{
+	margin-top: 100px;
+}
+#main .wrapper{
+	width: 640px;
+	margin: 0 auto;
+	text-align: center;
+}
+#main .wrapper img{
+	width: 270px;
+	padding-bottom: 20px;
+}
+#main .wrapper form{
+	height: 40px;
+}
+#main .spanSearch{
+	border: 1px solid gray;
+	border-right: none;
+	float: left;
+	height: 38px;
+}
+#main .soutuBtn{
+	float: right;
+	width: 18px;
+	height: 16px;
+	background: white url(img/camera.png) no-repeat;	
+	margin: 12px 6px;
+}
+#main .soutuBtn:hover{
+	background: white url(img/camera.png) no-repeat 0px -20px;
+}
+#main .spanSearch input{
+	width: 500px;
+	height: 38px;
+	border: none;
+	padding: 0px 0px 0px 7px; 
+	font-size: 16px;
+	outline: none;
+}
+#main .wrapper>form>input{
+	width: 100px;
+	height: 40px;
+	background: #3385ff;
+	font-size: 16px;
+	color: white;
+	border: none;
+	padding: 0;
+	vertical-align: bottom;
+	float: left;
+}

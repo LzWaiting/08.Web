@@ -1,0 +1,211 @@
+CSS 属性
+
+1. 尺寸
+	1. 尺寸属性
+		width/height
+		用来改变元素的宽高大小
+		取值：px为单位的数值，或者%
+		注意：
+			块元素和行内块元素都可以设置宽高大小，行内元素不起作用，大小由内容自适应
+	2. 溢出处理
+		溢出属性：overflow
+		取值：
+			1. visible	默认值，可见
+			2. hidden	隐藏，溢出部分隐藏不可见
+			3. scroll	显示滚动条,溢出时滚动条可用
+			4. auto		自动，当发生溢出时，产生滚动条并可用
+		示例： 见 example/15-overflow.html
+2. 边框
+	1. 边框实现（占用文本空间）
+		1. 边框简写
+			通过一个属性为四个方向设置边框
+			可以设置边框的 宽度 样式 颜色
+			属性：border
+			取值：width style color(缺一不可，顺序无要求)
+				width:像素为单位的数值，边框宽度,默认3px
+				style:设置边框样式
+					取值：
+						solid	实线
+						dashed	虚线
+						dotted	点线
+						double	双线
+				color：设置边框颜色,默认黑色
+			特殊用法：
+				取消边框 border: none;
+			示例： 见 example/16-border.html
+		2. 单独设置某个方向的边框
+			属性：
+				border-top
+				border-right
+				border-bottom
+				border-left
+			取值：width style color
+		3. 单独定义边框的宽度 样式 颜色
+			border-width:
+			border-style:
+			border-color:
+		4. 边框实现三角标
+			1. 元素的宽高尺寸为0
+			2. 元素分别设置四个方向的边框，宽度保持一致
+			3. 保留指定方向的边框颜色可见，剩余边框颜色设置为transparent 透明色
+			4. 注意：想要实现三角标，必须设置四个方向的边框，缺少的话，边框会恢复成矩形
+			示例：见 example/17-tangle.html
+	2. 轮廓线（不占用文本空间）
+		围绕在元素边框周围的线，常见于 表单元素
+		属性：outline
+		取值：width style color
+		一般多取消元素的默认轮廓线
+			outline：none;
+	3. 圆角边框
+		设置元素的圆角
+		属性：border-radius
+		取值：
+			1. 像素
+			2. % 参照元素尺寸获取
+		取值情况
+			1. border-radius: 20px;
+				一个值表示上右下左的圆角程度都是20px
+			2. border-radius: 10px 20px 30px 40px;
+				四个值分别代表四个方向的圆角程度
+			3. border-radius: 10px 20px;
+				两个值表示 上 下 对应，左 右 对应，对角保持一致
+			4. border-radius: 10px 20px 30px;
+				第四个值与第二个值保持一致
+			5. 改变元素的形状，改成圆形
+				border-radius: 50%;
+		示例： 见 example/18-border-radius.html
+	4. 边框阴影(盒阴影)
+		属性：box-shadow
+		取值：
+			offset-x 阴影的水平偏移距离
+			offset-y 阴影的垂直偏移距离
+			blur	 阴影的模糊程度，值越大越模糊
+			spread	 阴影的延伸距离
+			color	 阴影颜色
+		注意：
+			1. 浏览器坐标系，不管是窗口还是元素，都以左上角为原点，向由向下为 x 和 y 轴的正方向
+			2. spread 表示阴影的延伸距离，可以省略
+			3. color 表示阴影颜色，默认为黑色
+		示例：example/19-box-shadow.html
+3. 盒模型/框模型
+	1. 一切元素皆为框
+		盒模型：定义元素在文档中实际占据的尺寸
+		包含内容：外边框/边框/内边框/元素尺寸
+		默认情况下元素最终占据的尺寸大小：
+			最终宽度 = 左右的外边距 + 左右的边框 + 左右的内边距 + 元素宽度
+			最终高度 = 上下的外边距 + 上下的边框 + 上下的内边距 + 元素高度
+	2. 外边距
+		1. 元素边框与其他元素边框之间的距离
+			设置元素与元素之间的距离
+		2. 属性
+			margin
+			取值：可以是像素为单位的数值，也可以是%
+			取值情况：
+				1. margin : v1;
+					一个值表示上右下左四个方向都设置外边距
+				2. margin : v1 v2;
+					两个值表示上下的外边距为v1，左右外边距为v2
+				3. margin : v1 v2 v3;
+					上方的外边距为v1，下方的外边距为v3，左右外边距为v2
+				4. margin : v1 v2 v3 v4;
+					分别设置上右下左四个方向外边距
+			特殊用法：
+				1. 清除元素的默认外边距
+					margin: 0;
+				2. 设置元素在其父元素中水平居中
+					margin: 0 auto;
+				3. 取值可以是正值，也可以是负值，如果给负值，表示元素位置微调
+		3. 四个方向的外边距单独设置
+			属性：
+				margin-top
+				margin-right
+				margin-bottom
+				margin-left
+			取值：可以是像素值，也可以是%
+		4. 页面中具有默认外边距的元素
+			body/p/h/ol/ul,使用是可以清除外边距
+	3. 内边距
+		1. 元素的内容与元素边框之间的距离
+		2. 语法
+			属性：padding
+			取值：像素值或%
+			取值情况：同margin
+		3. 分别对四个方向的内边距做设置
+			padding-top
+			padding-right
+			padding-bottom
+			padding-left
+		4. 具有默认内边距的元素
+			ol/ul/form(text password button...)/td
+4. box-sizing
+	1. 作用：指定盒模型计算方式
+	2. 属性：box-sizing
+		取值：
+			1. content-box 默认值
+				元素的width height 属性只规定元素内容区域的大小，如果元素设置内外边距，边框，则元素最终的尺寸要进行累加（参照盒模型公式）
+			2. border-box
+				元素的width height 属性，设置是包含边框，内边距和内容部分总共的尺寸(width = border + padding + content)
+		示例：见example/22-box-sizing.html
+5. 元素显示设置
+	属性：display
+	作用：改变元素类型
+	取值：
+		1. block 		转换为块元素
+		2. inline		转换为行内元素
+		3. inline-block	转换为行内块元素
+		4. none			设置元素隐藏
+	注意：
+		1. block 设置元素显示
+		2. none  设置元素隐藏
+6. 背景相关的属性
+	1. 背景颜色
+		属性：background-color
+		取值：颜色值
+		注意：背景颜色从边框位置开始绘制
+			 如果元素添加内边距，也会按照背景颜色进行填充
+			 所有元素默认背景颜色都为透明，新建窗口为白色并不是body的背景颜色，是窗口渲染的结果
+	2. 背景图片
+		属性：background-image
+		取值：url(“图片路径”)
+	3. 背景图片平铺显示
+		如果背景图片尺寸小于元素尺寸，会自动对图片进行重复平铺，直到把元素铺满
+		属性：background-repeat
+		取值：
+			1. repeat 默认值，沿水平和垂直方向平铺
+			2. no-repeat 不重复平铺
+			3. repeat-x 横向平铺
+			4. repeat-y 纵向平铺	
+	4. 背景图片尺寸
+		属性：background-size
+		取值：像素值和%（包含width/height两个值）
+			特殊取值：
+				1. cover 将图片等比拉伸至完全覆盖元素，超出部分裁剪掉
+				2. contain 将图片等比拉伸至刚好被元素容纳，未填充部分不管
+	5. 背景图片的位置
+		默认情况下，背景图片从元素的左上角显示
+		属性：background-position
+		取值：
+			1. x y
+				以像素为单位的数值，使用空格隔开
+				x : 背景图片水平偏移距离，正右负左
+				y : 背景图片垂直偏移距离，正下负上
+			2. x% y%
+				百分比参照元素尺寸获取
+				1. 0% 0%
+					图片显示在左上角
+				2. 100% 100%
+					图片显示在右下角
+				3. 50% 50%
+					图片显示在中间
+			3. 使用方位值表示
+				x y
+				x: left center right
+				y: top center bottom
+				如果只设置一个方向上的关键字，另外一个方向默认是center
+	6. 背景属性简写
+		属性：background
+		取值：color url() repeat position;
+		注意：背景图片的尺寸大小需要单独设置
+		et:
+			background:red url() no-repeat right bottom
+	示例：见 example/23-background.html

@@ -1,0 +1,37 @@
+jQuery 事件处理
+	1. 页面加载完成之后再执行
+		语法：
+			1. $(document).ready(function(){
+				//加载完成之后执行的操作
+			});
+			2. $().ready(function(){
+				//加载完成之后执行的操作
+			});
+			3. $(function(){
+				//加载完成之后执行的操作
+			});
+		与原生onload事件的区别：
+			1. 原生onload事件不能多次使用，后面的会把前面的覆盖掉，只执行最后书写的onload
+			2. jQuery中的ready方法，也表示文档加载完毕，可以使用多次，所有的相关函数都会被执行，不会被覆盖
+			3. 原生onload事件，等待页面中DOM节点及所有页面资源全部加载完成才执行，jQuery中的ready方法，只等待DOM树加载完成就执行相关函数
+	2. jQuery 事件绑定
+		1. 方式1
+			$obj.bind('事件名称'，function(){
+				// 事件处理函数
+			});
+			注意：事件名称省略on前缀
+		2. 方式2
+			$obj.事件名称(function(){
+				// 事件处理函数
+			});
+			注意：
+				事件名称省略on前缀
+	3. jQuery 事件对象
+		在绑定事件时，允许传递参数表示事件对象
+		$obj.bind('click',function(event){
+			console.log(event);
+		});
+		事件对象的使用方法，与原生的一致
+		event.target
+		event.offsetX
+		...

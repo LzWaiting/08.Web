@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script src="index.js"></script>
+</head>
+<body>
+	<div id="baiduHomePage">
+		<div id="nav">
+			<div class="head">
+				<a href="#">新闻</a>
+				<a href="#">hao123</a>
+				<a href="#">地图</a>
+				<a href="#">视频</a>
+				<a href="#">贴吧</a>
+				<a href="#">学术</a>
+				<a href="#" class="spanLogin">
+					<span>登录</span>
+				</a>
+				<a href="#" class="spanSet">
+					<span>设置</span>	
+				</a>
+				<a href="#" class="baiduMore">
+					<span>更多产品</span>
+				</a>
+			</div>
+		</div>
+		<!-- 问题
+			给第一个子元素（块元素）添加margin-top时，会在父元素上起作用，整体向下移动
+			解决：
+				1. 给父元素添加边框（border-top）
+				2. 给父元素添加内边距（padding-top:0.1px;） 
+		-->
+		<div id="main">
+			<div class="wrapper">
+				<img src="img/logo.png">
+				<form action="" method="">
+					<span class="spanSearch">
+						<span class="soutuBtn"></span>
+						<input type="text" name="usearch" autocomplete="off">
+						<!-- 表单自动补全autocomplete 默认为on -->
+					</span>
+					<input type="submit" value="百度一下">
+				</form>
+			</div>
+		</div>
+		<div id="footer">
+			
+		</div>
+	</div>
+</body>
+</html>

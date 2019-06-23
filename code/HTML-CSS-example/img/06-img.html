@@ -1,0 +1,36 @@
+<!-- 图像与超链接标签示例 -->
+<!doctype html>
+<html>
+	<head>
+		<title>img标签</title>
+		<meta charset='utf-8'>
+	</head>
+	<body>
+		<!-- 在网页中使用图片标签插入一张图片 -->
+		<!-- 绝对路径加载网络文件 -->
+		<img src='http://imgsrc.baidu.com/imgad/pic/item/7e3e6709c93d70cfa2d88304f2dcd100baa12b9c.jpg'>
+
+		<!-- 绝对路径加载本地文件
+			1. Windows计算机绝对路径都是以盘符开始的
+			2. 需要手动补全文件名
+			3. Windows计算机两种斜杠都可以识别,需要手动修改路径中的斜杠为/
+				\ 是转义字符标志
+		 -->
+		<img src='/home/tarena/python/8.Web/code/img/cat1.jpg'>
+
+		<!-- 相对路径加载文件 -->
+		<img src='img/cat2.jpg'>
+		<!-- ../表示返回上一级目录文件夹 -->
+
+		<!-- 图片属性
+			宽高属性,如果只设置一个值,另外一个会等比缩放
+		 -->
+		<img src='img/cat2.jpg' width='300px'>
+		
+		<!-- 示例title属性 -->
+		<img src='img/cat2.jpg' width='500px' title='猫咪' alt='猫咪消失了'>
+		<!-- 示例alt属性 -->
+		<img src='cat2.jpg' width='500px' title='猫咪' alt='猫咪消失了'>
+
+	</body>
+</html>

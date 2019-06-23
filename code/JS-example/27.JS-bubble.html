@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		div{
+			width: 200px;
+			height: 200px;
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+	<script type="text/javascript">
+		var div = document.getElementsByTagName("div")[0];
+
+		// 添加事件监听
+		div.onclick = function(evt){
+			alert("div被点击");
+			evt.stopPropagation();
+		};
+		document.body.onclick = function(){
+			alert("body被点击");
+		};
+
+		// W3C标准事件监听函数
+		/*
+		事件函数名：click dbclick(省略on前缀)
+		function
+		事件传递机制：默认false(冒泡)，true(捕获)
+		*/
+		// div.addEventListener("click",function(){alert("div被点击");},true);
+		// document.body.addEventListener("click",function(){alert("body被点击");},true)
+
+
+	</script>
+</body>
+</html>

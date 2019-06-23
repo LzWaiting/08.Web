@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script src="jQuery/jquery-1.11.3.js"></script>
+</head>
+<body>
+	<h1>《登鹳雀楼》</h1>
+	<h2>王之涣</h2>
+	<p id="p1">白日依山尽</p>
+	<p class="c1">黄河入海流</p>
+	<p>欲穷千里目</p>
+	<p>更上一层楼</p>
+	<hr>
+	<div>
+		<h1>《登鹳雀楼》</h1>
+		<h2>王之涣</h2>
+		<p id="p1">白日依山尽</p>
+		<p class="c1">黄河入海流</p>
+		<p>欲穷千里目</p>
+		<p>更上一层楼</p>
+	</div>
+	<script type="text/javascript">
+		// 获取元素
+		console.log($('p'));
+		// 为元素添加样式 css("attrName","value")
+		$("p").css("font-size","32px");
+		$("#p1").css('color',"red");
+		$(".c1").css("color","orange");
+		$("h1,h2,p").css("text-align","center");
+
+		// 层级选择器
+		$("body h1").css("color","blue");
+		$("body>p").css("border","1px dashed green");
+		$("h1+h2").css("background","pink");
+		$("h1~p").css("background","gray");
+
+	</script>
+</body>
+</html>

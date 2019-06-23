@@ -1,0 +1,28 @@
+HTML 概述
+	
+	1. 什么是HTML
+		HyperText Markup language
+		超文本	  标记 	 语言
+		作用：书写网页结构
+	2. 超文本
+		具备特殊功能的文本就是超文本
+		et:
+			普通文本 a: 普通字符
+			超级文本 a: 表示超链接功能
+
+			普通文本 b: 普通字符
+			超级文本 b: 表示加粗功能
+	3. 标记
+		也叫标签，主要是用来标记网页中的内容，以实现网页的布局和JS操作
+
+HTML 在计算机中的表现
+	所有的网页文件在计算机中都是以 .html 或者 .htm文件存储的
+
+	开发工具
+		1. 记事本
+		2. Editplus/Dreamweaver
+		3. sublime/Webstorm/Hbuilder/VSCode/Atom...
+	运行工具
+		Chrome 浏览器
+	调试工具
+		开发者工具，F12打开

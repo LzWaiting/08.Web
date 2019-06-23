@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		function decode2Bin(){
+			var num = Number(prompt("输入数字"));
+			var n = num;
+			var arr = [];
+			 while (num != 0){
+				arr[arr.length] = num % 2;
+				num = parseInt(num / 2);
+			}
+			numBin = arr.reverse().join('');
+			console.log(n+"的二进制是"+numBin);
+			return numBin;
+		}
+	</script>
+</head>
+<body>
+	<button onclick="decode2Bin();">十进制转二进制</button>
+</body>
+</html>

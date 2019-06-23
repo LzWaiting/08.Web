@@ -1,0 +1,47 @@
+JS数据类型转换
+	相同数据类型的变量进行运算时，保持数据类型一致
+	1. 隐式类型转换（自动转换）
+		1. number + string
+			当字符串与其他类型相加时，+ 表示字符串的拼接，不再是数字运算
+			转换规则：将非字符串类型的数据转换成字符串之后进行拼接，最终结果为字符串
+			注意：
+				var n1 = 12 + 13 + '15';	// "2515"
+				var n2 = "15" + 12 + 13;	// "151213"
+		2. boolean + string
+			将布尔类型转换为字符串进行拼接
+			var n = true;
+			var r = n + "你好";	//	"true你好"
+		3. number + boolean
+			将布尔类型转换为数字进行数学运算
+				true = 1;
+				false = 0;
+				var n = true + 15;	// 16
+	2. 强制类型转换
+		1. toString()
+			将任意非字符串类型的数据转换为字符串类型，并返回转换后的结果
+			et:
+				var n = 100;
+				var r = n.toString();
+				console.log(typeof n,typeof r);
+		2. Number()
+			将数字字符串或者布尔值转换成number类型
+			如果字符串中包含非数字字符，转换失败，返回NaN（Not a Number）
+			et：
+				var r = Number("35.5");		// 35.5
+				var r1 = Number("true");	// 1
+				var r2 = Number("18a");		// NaN
+		3. parseInt()
+			用来解析字符串中的数字，只解析字符串开头中的数字，如果字符串不是以数字开头的，都返回NaN，并且只解析整数
+			et:
+				var r = parseInt("18.2a");	// 18
+				var r1 = parseInt("a18");	// NaN
+				var r2 = parseInt(35.5);	// 35
+				注意：如果parseInt方法的参数不是字符串，会自动先使用toString()转换成字符串，之后再进行解析
+		4. parseFloat()
+			作用等同于parseInt(),解析结果包含小数部分
+			et:
+				var r = parseFloat(35.5) 		// 35.5
+				var r1 = parseFloat("1.5e3")	// 1500
+			注意：如果字符串中出现指数计数法表示的小数，都视为是小数
+		5. toFixed(n)
+			toFixed() 方法可把 Number 四舍五入为指定小数位数的数字

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		#container{
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<button onclick="removeElem()">删除div</button>
+	<script type="text/javascript">
+		var div = document.createElement("div");
+		div.id = "container";
+		div.innerText = "动态创建的div";
+		document.body.appendChild(div);
+		var h1 = document.createElement("h1");
+		var text = document.createTextNode("创建动态的h1");
+		h1.appendChild(text);
+		// div.parentNode.appendChild(h1);
+		div.parentNode.insertBefore(h1,div);
+
+		function removeElem(){
+			document.body.removeChild(div);
+			// div.parentNode.removeChild(div);
+		}
+	</script>
+</body>
+</html>

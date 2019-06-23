@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		
+		// 生成验证码
+		function createCode(len){
+			// 1. 获取0-9，a-z,A-Z的所有字符
+			var arr = [];
+			var code = "";
+			for (var i = 0; i <= 9;i++){
+				arr.push(i);
+			}
+			for(var k = 65; k <= 90; k++){
+				var sA = String.fromCharCode(k);
+				arr.push(sA);
+			}
+			for (var j = 97; j <= 122; j++){
+				var sa = String.fromCharCode(j);
+				arr.push(sa);
+			}
+			// 2. 生成随机6位验证码
+			while(code.length < len){
+				var i = parseInt(arr.length*Math.random());
+				code += arr[i];
+			}
+			return code;
+		}
+
+		// 提供用户验证码
+		function get_Code(){
+			// 3. 将生成的验证码提示给用户
+			var code = createCode(6);
+			// 4. 验证用户输入是否正确
+			for(var i = 0; i < 6; i++){
+				var input = prompt("请输入6位验证码"+code).toLowerCase();
+				if (input == code.toLowerCase()){
+					alert("验证成功");
+					break;
+				} else{
+					var times = 5 - i;
+					alert("验证失败，剩余次数"+times);
+					if(times == 0){
+						break;
+					}
+				}	
+			}
+		}
+	</script>
+</head>
+<body>
+	<button onclick="get_Code();">获取验证码</button>
+</body>
+</html>

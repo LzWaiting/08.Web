@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>overflow示例</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		div{
+			width: 100px;
+			height: 100px;
+			background-color: pink;
+			/* 1.对溢出部分的处理，默认显示*/
+			/* 2.hidden 溢出部分不可见*/
+			/*overflow: hidden;*/
+			/* 3.scroll 显示滚动条*/
+			/*overflow: scroll;*/
+			/* 4.发生溢出时，在对应的方向自动auto添加滚动条可用*/
+			overflow: auto;
+		}
+	</style>
+</head>
+<body>
+	<!-- 溢出处理 -->
+	<div>
+		一人我饮酒醉，
+		醉把佳人成双对，
+		我们一起学猫叫，
+		一起喵喵喵，
+		奶茶变抹茶
+	</div>
+</body>
+</html>

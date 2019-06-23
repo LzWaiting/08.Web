@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+	<head>
+		<title>超链接标签示例</title>
+		<meta charset='utf-8'>
+	</head>
+	<body>
+		<!-- 超链接标签 -->
+		<!-- URL 网络路径必须带协议 -->
+		<a href='www.baidu.com'>百度</a>
+
+		<!-- target 默认在当前窗口打开_self -->
+		<a href='http://www.baidu.com' target='_blank'>百度-http</a>
+
+		<!-- 挑转本地文本,使用绝对路径 -->
+		<a href='/home/tarena/python/8.Web/code/05-list.html' target='_blank'>列表页</a>
+		
+		<!-- 使用相对路径跳转到本地文件 -->
+		<a href='img/06-img.html' target='_blank'>图片页</a>
+
+		<!-- 本地的文件协议
+			file:/// 类似于文件管理器
+			file:///+本地绝对路径
+		 -->
+		<a href='file:///home/tarena/python/8.Web/code/05-list.html' target='_blank'>列表页</a>
+
+		<!-- 超链接的嵌套 -->
+		<a href='#'>
+			<b>超链接文本</b>
+		</a>
+
+		<!-- 图片超链接 -->
+		<a href='#'>
+			<img src='img/cat1.jpg' width='200px'>
+		</a>
+
+	</body>
+</html>

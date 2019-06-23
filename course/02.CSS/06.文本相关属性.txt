@@ -1,0 +1,73 @@
+文本相关属性
+	1. 字体属性
+		1. 设置字体大小
+			属性：font-size
+			取值：px,默认大小为16px
+		2. 指定字体名称
+			属性：font-family
+			取值：字体名称，如果出现多个名称，使用“，”隔开
+			注意：如果字体名称中出现中文或者空格，要用引号引起来
+			et:
+				font-family: Arial,serif;
+				font-family:"微软雅黑"，"黑体";
+				font-family:"Microsoft YaHei";
+		3. 设置字体加粗
+			属性：font-weight
+			取值：
+				1. 单词表示
+					normal	默认值，正常显示
+					bold	加粗显示
+					lighter	极细文本
+				2. 数字表示
+					可以取100 - 900之间的整百数值，数值越大字体越粗
+					400 等价于 normal
+					700 等价于 bold
+		4. 设置字体样式
+			属性：font-style
+			取值：
+				1. normal	正常显示
+				2. italic	使用斜体
+				3. oblique	倾斜显示，出现斜体效果（倾斜一定角度）	
+		5. 字体属性简写
+			属性：font
+			取值：style weight size family;
+			注意：font-family属性值必须写，不写的话整个属性无效,其余可以省略
+			et:
+				font: 18px "黑体"，"Microsoft YaHei";
+	2. 文本属性
+		1. 文本颜色
+			属性：color
+			取值：颜色值
+		2. 文本水平对齐方式
+			属性：text-align
+			取值：left(默认值)/center/right/justify(两端对齐)
+		3. 设置行高
+			属性：line-height
+			取值：像素值 或 无单位的数值，表示当前文本大小的倍数
+			et:
+				line-height: 18px;
+				p{
+					font-size: 18px;
+					line-height: 2;
+					<!-- 表示行高为当前字体大小的2倍，即36px -->
+				}
+			常用：使用行高设置一行文本的垂直居中
+			用法1：将元素的行高与高度保持一致
+			et:
+				div{
+					width: 100px;
+					height: 50px;
+					line-height: 50px;
+				}
+			用法2：使用行高对文本上下进行微调
+				line-height = height 垂直居中
+				line-height > height 文本偏下
+				line-height < height 文本偏上
+			注意：一行文本在当前行中一定是垂直居中的，上下的空隙由浏览器自动分配
+		4. 文本装饰线
+			属性：text-decoration
+			取值：
+				1. underline:下划线
+				2. overline:上划线
+				3. line-through: 删除线
+				4. none:针对超链接，取消默认下划线

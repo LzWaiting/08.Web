@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		// var sum = 0;
+		// for (var i = 1; i < 101; i++) {
+		// 	sum += i;
+		// }
+
+		// 模拟跑10圈
+		// for (var i = 1; i <= 10; i++) {
+		// 	if (i == 5){
+		// 		console.log("第"+i+"圈,跑不动了,共跑了"+sum+"米");
+		// 		break;
+		// 	}
+		// 	console.log("开始跑第"+i+"圈");
+		// 	sum += 400
+		// 	console.log("跑了"+i+"圈");
+		// }
+		// for (var j=1; j <= 10; j++){
+		// 	console.log("开始跑第"+j+"圈");
+		// 	if (j == 5){
+		// 		console.log("第"+j+"圈,下场补水")
+		// 		continue;
+		// 	}
+		// 	console.log("跑了"+j+"圈");
+		// }
+
+		// 1. 判断素数
+		// var num = Number(prompt("输入整数"));
+		// var isSu = true;
+		// for (var i = 2; i < num; i++){
+		// 	if (num % i == 0){
+		// 		isSu = false;
+		// 		break;
+		// 	} 
+		// }
+		// if(isSu){
+		// 	console.log("是素数");
+		// } else{
+		// 	console.log("不是素数");
+		// }
+		
+
+		// 2. 判断星期几,1990-1-1星期一
+		var year = prompt('输入年');
+		var month = prompt("输入月");
+		var day = Number(prompt('输入日'));
+		var days = day;
+		for (var i = 1990; i < year; i++){
+			days += 365;
+			if (i % 100 != 0 && i % 4 == 0 || i % 400 == 0) days ++;
+		}
+		for (var j = 1; j < month; j++){
+			switch(j){
+				case 1:
+				case 3:
+				case 5:
+				case 7:
+				case 8:
+				case 10:
+					days += 31;
+					break;
+				case 4:
+				case 6:
+				case 9:
+				case 11:
+					days += 30;
+					break;
+				case 2:
+					days += 28;
+					if ( year % 100 != 0 && year % 4 == 0 || year % 400 == 0){
+						days ++;
+					}
+					break;
+			}
+		}
+		var date = days % 7;
+		var res = "";
+		switch(date){
+			case 0:
+				res = "日";
+				break;
+			case 1:
+				res = "一";
+				break;
+			case 2:
+				res = "二";
+				break;
+			case 3:
+				res = "三";
+				break;
+			case 4:
+				res = "四";
+				break;
+			case 5:
+				res = "五";
+				break;
+			case 6:
+				res = "六";
+				break;
+		}
+		console.log(year+"年"+month+"月"+day+"日"+"星期"+res);
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

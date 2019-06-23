@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		// function subemail(){
+		// 	var email = prompt("输入邮箱");
+		// 	var atIndex = email.indexOf("@");
+		// 	var client = email.substring(0,atIndex);
+		// 	var server = email.substring(atIndex+1);
+		// 	console.log(client,server);
+		// }
+
+		// var cardID = "100233186012057663";
+		// var ymd = cardID.substring(6,14);
+		// console.log(ymd);
+
+		var str = "微软是一家国际大公司，Microsoft的官网上有自己公司microsoft的logo。";
+		var reg = /microsoft/ig;
+		var newStr = str.replace(reg,"微软");
+		var arr = str.match(reg);
+		console.log(newStr+"替换了"+arr.length+"次microsoft");
+	</script>
+</head>
+<body>
+
+</body>
+</html>

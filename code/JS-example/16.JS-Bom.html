@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		// 周期定时器
+		var timer;
+		function startInterval(){
+			function showTime(){
+				var date = new Date();
+				console.log(date.toLocaleTimeString());
+			}
+			timer = setInterval(showTime,1000);
+		}
+		function stopInterval(){
+			clearInterval(timer);
+		}
+
+		function startTimeout(){
+			function showTime(){
+				alert("已经过去3秒了");
+			}
+			timer = setTimeout(showTime,3000); 
+		}
+		function stopTimeout(){
+			clearTimeout(timer);
+		}
+	</script>
+</head>
+<body>
+	<button onclick="startInterval()">开始1</button>
+	<button onclick="stopInterval()">结束1</button>
+	<button onclick="startTimeout()">开始2</button>
+	<button onclick="stopTimeout()">结束2</button>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<!-- 引入jQuery文件 -->
+	<script src="jQuery/jquery-1.11.3.js"></script>
+</head>
+<body>
+	<div id="main">
+		这是id为main的div文本
+	</div>
+	<button onclick="getElem()">获取元素</button>
+	<button onclick="domToJQ()">DOM -> jQuery</button>
+	<button onclick="jqToDom()">jQuery -> DOM</button>
+	<script type="text/javascript">
+		// 1. 获取元素
+		function getElem(){
+			console.log($("#main"));
+			// 获取元素内容
+			console.log($("#main").html());
+			$("#main").html("动态设置的div文本");
+		}
+		// 2. 元素转换
+		function domToJQ(){
+			// 1. 获取DOM对象
+			var div = document.getElementById("main");
+			// 2. 转换为JQ对象
+			var $div = $(div);
+			$div.html("转换JQ对象成功");
+			console.log(div,$div);
+		}
+		function jqToDom(){
+			// 1. 获取JQ对象
+			var div = $("#main")[0];
+			var div1 = $("#main").get(0);
+			div.innerHTML = "转化为DOM元素成功"; 
+			console.log(div,div1);
+		}
+	</script>
+</body>
+</html>

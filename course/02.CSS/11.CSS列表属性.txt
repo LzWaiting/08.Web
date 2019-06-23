@@ -1,0 +1,20 @@
+列表属性
+	1. 列表本身是块级元素，自带内外边距，带有项目符号
+	2. 属性
+		1. 属性：list-style-type
+			设置项目符号
+			取值：
+				1. none		取消项目符号
+				2. disc		实心圆点
+				3. cricle	空心圆点
+				4. square	实心方块
+				...
+		2. 属性：list-style-image
+			设置项目符号为图片
+			取值：url('图片路径')
+		3. 属性：list-style-position
+			设置项目符号的位置
+			取值：inside / outside(默认)
+			设置项目符号出现在内容框的外部还是内部
+		4. 属性简写（必须掌握）
+			属性：list-style: none;	常用来取消列表项目符号

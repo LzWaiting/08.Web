@@ -1,0 +1,21 @@
+表格属性
+	1. 基础样式属性是通用
+		width height background color margin padding...
+	2. 独有的CSS属性
+		1. 边框合并
+			属性：border-collapse
+			取值：
+				1. separate 默认值 边框分离
+				2. collapse 边框合并
+			注意：
+				1. td 不支持外边距
+				2. 边框合并属性只能写在table标签中
+		2. 边框边距
+			1. 设置单元格之间的距离
+			2. 属性：border-spacing
+				取值：
+					hValue:表示水平方向的距离 
+					vValue:表示垂直方向的距离
+					两个值之间使用空格隔开
+			3. 注意：
+				只能在表格边框分离状态下使用

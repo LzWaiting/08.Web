@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Document</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<div id="d1"></div>
+	姓名：<input type="text" name="utext">
+	<input type="button" value="显示" onclick="showText()">
+</body>
+<script type="text/javascript">
+	function showText(){ 
+		var div = document.getElementById("d1");
+		var input = document.getElementsByName('utext')[0];
+		div.innerHTML = "<h1>" + input.value + "</h1>";
+	}
+</script>
+</html>

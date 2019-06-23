@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		var str = "Hello, Tom,The Microsoft need a logo? No,Microsoft doesn't need.Because microsoft is a big compony.Their phone is 81082142"
+
+		var reg1 = /microsoft/ig;
+		var reg2 = new RegExp("microsoft","ig");
+		var reg3 = /\d{6,10}/ig;
+		var reg4 = new RegExp("\\d{6,10}","ig");
+
+		var res1 = reg1.test(str);
+		console.log(res1,reg1.lastIndex);
+		var res2 = reg1.test(str);
+		console.log(res2,reg1.lastIndex);
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

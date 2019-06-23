@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.redText{
+			color:red;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>JS操作标签属性</h1>
+	<button onclick="getAttr()">获取属性</button>
+	<button onclick="setAttr()">设置属性</button>
+	<button onclick="removeAttr()">删除属性</button>
+</body>
+<script type="text/javascript">
+	// 获取元素节点
+	var h1 = document.getElementsByTagName('h1')[0];
+	function getAttr(){
+		// console.log(h1.getAttribute('class'));
+		console.log(h1.className);
+	}
+	function setAttr(){
+		// h1.setAttribute("class","redText");
+		h1.className = "redText";
+	}
+	function removeAttr(){
+		// h1.removeAttribute("class");
+		h1.className = null;
+	}
+</script>
+</html>

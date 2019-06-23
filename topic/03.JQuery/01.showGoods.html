@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script src="../jQuery/jquery-1.11.3.js"></script>
+	<style type="text/css">
+		table{
+			width: 600px;
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+		th,td{
+			border: 1px solid black;
+			text-align: center;
+		}
+	</style>
+	<script type="text/javascript">
+		$(function(){
+			$('button').click(function(){
+				// 获取元素节点
+				var gname = $("[name=gname]").val();
+				var gprice = $("[name=gprice]").val();
+				var gcount = $("[name=gcount]").val();
+				// 创建行
+				var $tr = $("<tr></tr>");
+				// 创建四个单元格，并赋值
+				var $tdName = $('<td></td>');
+				$tdName.html(gname);
+				var $tdPrice = $('<td></td>');
+				$tdPrice.html(gprice);
+				var $tdCount = $('<td></td>');
+				$tdCount.html(gcount);
+				var $tdOper = $('<td></td>');
+				// 创建两个操作按钮
+				var $btnUpdate = $('<button>修改</button>');
+				var $btnDelete = $('<button>删除</button>');
+				// 设置按钮显示文本，并添加到$tdOper中
+				$tdOper.append($btnUpdate);
+				$tdOper.append($btnDelete);
+				// 向页面添加元素
+				$tr.append($tdName);
+				$tr.append($tdPrice);
+				$tr.append($tdCount);
+				$tr.append($tdOper);
+
+				$('tbody').append($tr);
+			});
+		});
+	</script>
+</head>
+<body>
+	<p>
+		<input type="text" name="gname" placeholder="商品名称">
+		<input type="text" name="gprice" placeholder="商品价格">
+		<input type="text" name="gcount" placeholder="购买数量">
+		<button>添加</button>
+	</p>
+	<table>
+		<thead>
+			<tr>
+				<th>商品名称</th>
+				<th>商品价格</th>
+				<th>购买数量</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			
+		</tbody>
+	</table>
+</body>
+</html>

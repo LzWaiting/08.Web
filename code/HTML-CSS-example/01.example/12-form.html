@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>form表单示例</title>
+	<meta charset='utf-8'>
+</head>
+<body>
+	<!-- 表单 -->
+	<form action='1.php' method='get'>
+		<!-- 表单控件 
+			文本框与密码框
+		-->
+		<p>
+			用户名称：
+			<input type="text" name="uname" maxlength='8' placeholder='请输入用户名'>
+			<span>最大输入长度为八位</span>
+		</p>
+
+		<p>
+			用户密码：
+			<input type="password" name="upwd">
+		</p>
+		<!-- 单选框 -->
+		<p>
+			用户性别：
+			<input type="radio" name="gender" value='male' id='male' checked><label for='male'>男</label>
+			<input type="radio" name="gender" value='female' id='female'><label for='female'>女</label>
+		</p>
+		<!-- 复选框 -->
+		<p>
+			用户爱好：
+			<input type="checkbox" name="hobby" value='smoke' id='smoke'><label for='smoke'>抽烟</label>
+			<input type="checkbox" name="hobby" value='drink' id='drink'><label for='drink'>喝酒</label>
+			<input type="checkbox" name="hobby" value='perm' id='perm'><label for='perm'>烫头</label>
+		</p>
+		<!-- 隐藏域 -->
+		<input type="hidden" name="uID" value="10086">
+		<!-- 文件选择框 -->
+		<p>
+			上传文件：
+			<input type="file" name="ufile">
+		</p>
+		<!-- 下拉选择框 -->
+		<p>
+			选择省份：
+			<select name='province'>
+				<option value='030000'>山西省</option>
+				<option value='610000'>四川省</option>
+				<option value='710000'>陕西省</option>
+			</select>
+		</p>
+		<!-- 文本域 -->
+		<p>
+			个性签名：
+			<textarea name='uInfo' cols='50' rows='10'>
+				
+			</textarea>
+		</p>
+
+		<p>
+			<input type="submit" name='submit' value='注册'>
+			<input type="reset" name='reset' value='取消'>
+			<input type="button" name='click' value='登录'>
+			<button>点我（button submit）</button>
+		</p>
+	</form>
+</body>
+</html>

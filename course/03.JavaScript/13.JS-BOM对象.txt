@@ -1,0 +1,80 @@
+BOM
+	Browser Object Model 浏览器对象模型，提供操作浏览器的相关方法
+	核心对象 window，浏览器窗口对象，是JS的顶层对象
+	注意：
+		window --> document //window 顶层对象包含document
+		document.write() <==> window.document.write() 
+
+window对象
+	1. 作用：浏览器窗口对象
+		全局变量和全局函数，都是window对象的属性和方法，window在使用时可以省略
+		et:
+			var a = 10;
+			window.b = 10;
+			console.log(a,b);
+			function sum(){
+			}
+			window.sum = function(){};
+			sum();
+			window.sum();
+	2. 对话框
+		1. alert("");
+			警告框 window.alert();
+		2. propmt("");
+			输入框 window.prompt();
+		3. confirm("是否确认");
+			确认框 返回布尔值，只有当用户点击“确定”时,返回true,其余都为false
+	3. 定时器方法
+		作用：按照指定的周期或者时间间隔，来调用函数或者计算表达式
+		1. 周期性定时器/间歇调用
+			1. 特点：每隔一段时间就执行一遍代码
+			2. 语法：
+				var timer = setInterval(fun,duration);
+				参数：
+					fun: 表示要执行的操作，可以是函数名，也可以直接使用匿名函数
+					duration: 时间间隔，隔多少时间执行一次代码，单位是 ms(毫秒)
+				返回值：
+					timer:表示当前定时器的ID，就是一个整数，可以区分不同的定时器，清除定时器使用
+			3. 清除定时器
+				clearInterval(timer);
+				参数：定时器的ID
+		2. 一次性定时器/超时调用
+			1. 特点：在指定的时间间隔之后，执行一次操作
+			2. 语法：
+				var timer = setTimeout(fun,delay);
+				参数：
+					fun：要执行的操作
+					delay: 时间间隔，要隔多久再执行相应操作
+				返回值：
+					timer：定时器ID，在清除定时器时使用
+			3. 清除定时器
+				clearTimeout(timer);
+	4. window 属性
+		window 属性，本身又是一个对象
+		1. screen 对象
+			访问屏幕对象：screen
+			作用：获取客户端显示器相关的信息
+			属性：
+				1. width/height 获取屏幕的宽高
+				2. availWidth/availHeight 获取屏幕实际可用的宽高（减去任务栏之后的值）
+		2. history 对象
+			作用：包含当前窗口（访问过的所有URL）
+			属性：
+				1. length 属性：获取当前窗口访问过的URL的数量
+			方法：
+				1. back() 		后退
+				2. forward() 	向前
+				3. go(num) 		跳转几步，num取值为整数，可正负，表示在当前网页的基础上前进/后退几步
+		3. location 对象
+			作用：location 保存的是浏览器地址栏的信息
+			属性：
+				href:获取当前窗口正在浏览的网页url
+					如果手动给href属性赋值，就相当于页面跳转
+			方法：
+				reload() 	重载，相当于刷新
+				reload(true) 忽略缓存，从服务器端加载
+				reload(false) 从缓存中加载（默认）
+		4. navigator 对象
+			作用：保存浏览器相关的信息
+			属性：
+				userAgent:显示信息

@@ -1,0 +1,10 @@
+JavaScript概述
+	定义：简称JS，是一种运行于JS解释器或执行引擎中的脚本代码，是一种浏览器解释型语言
+	作用：主要用来实现页面的交互与动态效果
+	1. JS 组成
+		1. 核心语法-ECMAScript 简称 ES
+			规范了JS的基本语法
+		2. 浏览器对象模型 -Browser Object Model 简称 BOM
+			提供了一系列操作浏览器的方法
+		3. 文档对象模型 -Document Object Model 简称 DOM
+			提供了一系列操作文档的方法

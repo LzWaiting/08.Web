@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Document</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h1 class="c1">杨超越</h1>
+	<h1 id="wxy">吴宣仪</h1>
+	<h1 class="c1">应采儿</h1>
+	<p class="c1">谢娜</p>
+	<p>何炅</p>
+	兴趣：<input type="checkbox" name="hobby" value="smoke" class="c1">抽烟
+	<input type="checkbox" value="drink" name="hobby">喝酒
+	<br>
+	经历：<input type="checkbox" name="experience">无
+</body>
+<script type="text/javascript">
+	// 1. 获取元素节点对象
+	var elems1 = document.getElementsByTagName("h1");
+	console.log(elems1);
+	// 2. 根据class属性值获取元素节点列表
+	var elems2 = document.getElementsByClassName("c1");
+	console.log(elems2);
+	// 3. 根据name属性值获取元素节点
+	var elems3 = document.getElementsByName("hobby");
+	console.log(elems3);
+	// 4. 通过id获取元素节点
+	var elem = document.getElementById("wxy");
+	console.log(elem);
+
+	elems1[0].innerHTML = "<span>就pick吴宣仪</span>";
+	elems1[1].innerText = "<span>就pick吴宣仪</span>";
+	elems2[3].value = "smoking";
+
+</script>
+</html>

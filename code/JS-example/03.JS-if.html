@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		// 以下条件结果都为假
+		// console.log(Boolean(0));
+		// console.log(Boolean(0.0));
+		// console.log(Boolean(""));
+		// console.log(Boolean(NaN));
+		// console.log(Boolean(undefined));
+		// console.log(Boolean(null));
+		// console.log(Boolean(100));
+		// console.log(Boolean("a"));
+
+		// if 语句
+		// var score = prompt("请输入分数");
+		// if(score < 60){
+		// 	console.log('不及格');
+		// }
+
+		// 省略{},只控制该结构下的第一条语句
+		// if(score >= 60 && score < 80) console.log("及格");
+
+		// if - else 语句
+		// var age = prompt("请输入年龄");
+		// if(age < 18){
+		// 	console.log('未成年不允许进入网吧');
+		// } else {
+		// 	console.log('欢迎光临');
+		// }
+
+		// 多重分支结构
+		// var score = prompt("请输入分数");
+		// if(score >= 90){
+		// 	console.log(score,'该成绩优秀');
+		// } else if(score >= 80){
+		// 	console.log(score,'该成绩良好');
+		// } else if(score >= 60){
+		// 	console.log(score,'该成绩及格');
+		// } else{
+		// 	console.log(score,'该成绩不及格');
+		// }
+
+		// 日期计算器
+		var year = Number(prompt('请输入年'));
+		var month = Number(prompt('请输入月'));
+		var day = Number(prompt('请输入日'));
+		var days = 0;
+		var isRun = year % 100 != 0 && year % 4 == 0 || year % 400 == 0;
+		if(month <= 2){
+			days = (month-1)*31;
+		} else if(month < 8){
+			days = (parseInt(month/2))*31 + (parseInt(month/2 - 1))*30 + 28;
+		} else{
+			days = 4 * 31 + 28 + 2 * 30 + (parseInt((month-7)/2))*31 + (parseInt((month-8)/2))*30;
+		}
+		if (isRun && month > 2){
+			days += 1 + day;
+		} else{
+			days += day;
+		}	
+		console.log(year+"年"+month+"月"+day+"日"+"是一年中的第"+days+"天");
+	</script>
+</head>
+<body>
+
+</body>
+</html>

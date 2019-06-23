@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		function fn1 (){
+			console.log("这是一个无参数无返回值的函数");
+		}
+		function fn2 (a){
+			 console.log(a);
+		}
+		function sum(a,b){
+			return a + b;
+		}
+		fn1();
+		fn2("hello");
+		var r1 = sum(13,12);
+		console.log(r1);
+		
+		// 匿名函数
+		var fn = function(){
+			console.log("这是个匿名函数");
+		};
+		fn();
+
+		// 元素绑定
+		function sayHi(){
+			alert("Hi");
+		}
+
+
+		
+	</script>
+</head>
+<body>
+	<button onclick="sayHi();">聊天</button>
+</body>
+</html>

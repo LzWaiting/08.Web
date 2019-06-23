@@ -1,0 +1,44 @@
+JS 使用方式
+	1. 在元素标签中绑定JS代码，主要指JS事件
+		事件：用户在元素上所激发的行为操作（比如单击）
+		语法：
+			<标签 onclick="JS 操作">
+			JS 操作 如果涉及代码非常多，一般会抽离出来单独写在JS文件中，如果是简单的代码，可以以属性值字符串的形式书写
+			et: 
+				console.log("在控制台输出一句话");
+	2. 将JS代码嵌套在文档中，使用<script></script>标签
+		语法：
+			<script type="text/javascript">
+				JS 代码
+			</script>
+		注意：<script type="text/javascript"></script>标签可以书写在文档的任意位置，书写多次，但是不同位置会影响代码最终的执行效果
+		特点：网页加载到标签时就会执行内部的JS代码
+		et:
+			<script type="text/javascript">
+				// 在控制台输出，开发人员进行调试的品台
+				console.log('');
+				// 在页面中输出，会重写网页主体内容
+				document.write('');
+			</script>
+	3. 外部链接
+		语法：
+			创建外部的JS文件 .js
+			在文档中使用<script src="JS路径"></script>标签引入
+			注意：
+				1. src 引入的外部资源是网页加载所必须的一部分，网页在加载src文件时，会等待文件加载完毕再执行后面的代码
+				2. href 网页在加载href文件时，不会等待加载完毕，边加载边向后执行
+				3. 在JS的引入标签中<script src="JS路径"></script>不能再书写任何JS代码
+		常用操作：
+			1. console.log('');
+				控制台输出，多用于代码调试
+			2. document.write('');
+				网页输出，
+				et:
+					document.write('<h1>Hello</h1>');
+				1. 在使用事件方式写入时，会重写网页主体内容（事件涉及网页的刷新）
+				2. 可以识别HTML标签,脚本代码可以在文档任何地方书写，如果是普通写入（不涉及事件），区分代码的书写位置，在当前位置中插入，如果是在head中嵌入，内容会作为body的首行内容显示
+			3. alert('');
+				普通的网页弹框
+			4. prompt('');
+				接收用户输入的弹框，返回用户输入的内容
+		示例：见topic/02.JS-exer/01.alert.html

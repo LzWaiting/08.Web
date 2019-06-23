@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		// 1. 全局变量
+		var a=100,b=200;
+		c = 300;
+		function fn(){
+			d = 1000;
+			// 只要省略关键字定义变量，一律视为全局变量
+			console.log("在fn中访问变量",a,b,c);
+		}
+		fn();
+		console.log("在函数外部访问",a,b,c,d);
+
+		function fn2(){
+			var a = 10;
+			var b = 20;
+			console.log("fn2中访问",a,b);
+		}
+		fn2();
+		console.log("外界访问",a,b);
+	</script>
+</head>
+<body>
+
+</body>
+</html>

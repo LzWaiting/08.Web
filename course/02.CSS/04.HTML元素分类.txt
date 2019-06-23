@@ -1,0 +1,25 @@
+HTML中标签分类
+	
+1. 块元素
+	特点：
+		1. 独占一行，不与其他元素共行显示
+		2. 可以手动设置宽高
+	et: div h1 p ul ol li table form 
+2. 行内元素
+	特点：
+		1. 可以与其他元素或者文本共行显示
+		2. 不能手动设置宽高，元素的大小由内容决定
+	et: span a i b u s label sup sub
+3. 行内块元素
+	特点：
+		既可以与其他元素共行显示，也可以手动设置宽高
+	et: img input 
+	属性：
+		可以通过vertical-align设置行内块元素左右元素与其垂直对齐方式
+		取值：top/middle/bottom
+		注意：vertical-align只在行内块元素中使用
+注意：
+	行内元素是可以共行显示的，但是如果代码中出现了换行，页面最终效果上，行内元素之间会有空隙
+
+CSS 常用属性
+	width/height/color/background-color/font-size/font-weight/text-decoration/vertical-align

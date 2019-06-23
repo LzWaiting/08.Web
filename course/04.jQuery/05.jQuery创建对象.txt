@@ -1,0 +1,25 @@
+jQuery 创建对象
+	1. $('标签')
+		参数为要创建的标签，使用HTML标签语法
+		et:
+			var $div = $('<div></div>');
+			$div.html('动态创建的div');
+			$div.attr('id',"box");
+			$div.css('color',"red");
+		et2:
+			var $div = $("<div id='box' style='color:red;'>动态创建的div</div>");
+jQuery 插入元素
+	1. 内部插入
+		将创建好的元素作为子元素插入到网页中
+		$obj.append($new)
+			将新创建的元素作为最后一个子元素添加
+		$obj.prepend($new)
+			将创建好的元素作为第一个子元素添加
+	2. 作为兄弟元素插入
+		$obj.after($new)
+			将新元素作为$obj的下一个兄弟元素添加进来
+		$obj.before($new)
+			将新元素作为$obj的上一个兄弟元素添加进来
+jQuery 删除元素
+	语法：$obj.remove()
+	作用：将$obj移除掉

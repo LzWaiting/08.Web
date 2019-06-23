@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script src="jQuery/jquery-1.11.3.js"></script>
+</head>
+<body>
+	<ul>
+		<li>白日依山尽</li>
+		<li>黄河入海流</li>
+		<li>欲穷千里目</li>
+		<li>更上一层楼</li>
+	</ul>
+	<ul>
+		<li>白日依山尽</li>
+		<li>黄河入海流</li>
+		<li>欲穷千里目</li>
+		<li>更上一层楼</li>
+	</ul>
+	<script type="text/javascript">
+		$("li:first-child").css("color","red");
+		$("li:last-child").css("color","green");
+		$("li:nth-child(3n+1)").css("color","blue");
+		$("li:nth-child(odd)").css("font-size","32px");
+		$("li:nth-child(even)").css("font-size","12px");
+	</script>
+</body>
+</html>

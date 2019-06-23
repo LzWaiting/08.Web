@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<a href="http://www.baidu.com">百度</a>
+	<button onclick="modifyHref()">点我有惊喜</button>
+</body>
+<script type="text/javascript">
+	function modifyHref(){
+		var aLink = document.getElementsByTagName("a")[0];
+		aLink.innerHTML = "达内";
+		aLink.target = "_blank";
+		aLink.setAttribute("href","http://www.tmooc.cn");
+	}
+</script>
+</html>

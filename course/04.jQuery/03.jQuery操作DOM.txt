@@ -1,0 +1,63 @@
+jQuery操作DOM
+	1. 基本操作
+		1. html()
+			获取或者设置jQuery对象中的html内容
+			类似于DOM中的innerHTML,可识别标签
+		2. text()
+			获取或者设置jQuery对象中的Text内容
+			类似于DOM中的innerText
+		3. val()
+			获取或者设置jQuery对象value值（常见表单控件）,获取表单控件的值时，只返回第一个表单元素的value值
+			类似于DOM中的value
+		4. 属性操作
+			1. attr()
+				读取或者设置jQuery对象属性值
+				参数为字符串形式的属性名
+				当设置属性值时，参数为("attrName","value")
+				et:
+					console.log($('div').attr('id'));
+					$('div').attr('class',"c1")
+			2. removeAttr()
+				移除指定的属性，参数为属性名
+				et:
+					$('div').removeAttr('id');
+	2. 样式操作
+		1. attr()
+			添加id或class属性，对应选择器，为元素添加样式
+		2. addClass('className')
+			将className作为值添加到元素的class属性上
+			是可以连缀调用的
+			et:
+				$('h1').addClass('c1').addClass('c2');
+		3. removeClass('className')
+			移除className
+			参数可以省略，表示清空类选择器
+		4. toggleClass('className')
+			切换样式
+			元素如果具备className对应的样式，则删除，如果没有，就添加
+		5. css('')
+			获取元素样式属性的值
+			et:
+				$('div').css('width');
+		6. css('','')
+			设置元素样式
+			et:
+				$('div').css('width','200px');
+		7. css(JSON对象)
+			设置元素样式，参数为一组CSS属性
+			JSON对象：是一种约束了格式的对象表现形式
+			JSON：javaScript Object Notation
+			JSON对象的表示方式：
+				1. JSON对象必须使用{}括起来
+				2. 使用键值对来声明数据（属性与值）
+				3. 所有的属性在声明时必须使用字符串形式""
+				4. 属性值如果也是字符串，也必须使用""
+				5. 属性与值之间使用:连接
+				6. 多对属性和值之间使用,隔开
+			et:
+				$('div').css({
+					'width':'200px',
+					'height':'200px',
+					'background':'red'
+				});
+		

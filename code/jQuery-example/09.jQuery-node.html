@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script src="jQuery/jquery-1.11.3.js"></script>
+
+</head>
+<body>
+	<h1>静夜思</h1>
+	<ul>
+		<li class="c1">床前明月光</li>
+		<li>疑是地上霜</li>
+		<li>举头望明月</li>
+		<li>低头思故乡</li>
+	</ul>
+	<h1 id="h1">李白</h1>
+	<ol>
+		<li>床前明月光</li>
+		<li>疑是地上霜</li>
+		<li>举头望明月</li>
+		<li>低头思故乡</li>
+	</ol>
+	<script type="text/javascript">
+		// 1. 获取子节点
+		console.log($('body').children());
+		console.log($('body').children('h1'));
+
+		// 2. 获取兄弟元素
+		console.log($('ul').next());
+		console.log($('ul').next('ol'));//用于筛选
+		
+		console.log($('ul').prev());
+
+		// 3. 获取所有兄弟元素
+		console.log($('.c1').siblings());
+		console.log($('#h1').siblings("ol"));
+		
+		// 4. 获取所有的后代元素
+		console.log($('ul').find('.c1'));
+		console.log($('body').find('li'));
+
+		// 5. 获取父元素
+		console.log($('.c1').parent());
+		console.log($('li').parent());
+	</script>
+</body>
+</html>

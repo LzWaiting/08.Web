@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>选择器权值示例</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		/*标签选择器，权值为1*/
+		h1{
+			color: red;
+		}
+		/*类选择器，权值为10*/
+		.c1{
+			color: green;
+		}
+		/*id选择器和标签选择器复合，权值为101*/
+		#box h1{
+			color: blue;
+		}
+		/*id选择器和类选择器复合，权值为110*/
+		#box .c1{
+			color: orange;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<!-- 行内样式，权值为1000 -->
+		<h1 class="c1" style="color:yellow;">一级标题</h1>
+	</div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+jQuery
+	1. 介绍
+		jQuery是一个JavaScript的库，通过封装原生的JavaScript，得到一整套定义好的方法，简化JS操作
+		Write Less，Do More 
+		jQuery版本
+			jQuery 1.xx.x版本，兼容IE 6,7,8
+			jQuery 2.xx.x版本，不兼容IE 6,7,8
+	2. jQuery 的功能和优势
+		1. 简化DOM操作，像操作CSS一样去操作DOM
+		2. 直接通过选择器设置元素样式
+		3. 简化JS的代码操作（链式调用）
+		4. 事件的处理更加容易
+
+		5. 各种动画效果使用更加方便
+		6. 让Ajax技术更完美
+		7. 基于jQuery有大量方便的插件
+		8. 自行扩展功能插件
+	3. jQuery 使用
+		1. 引入jQuery 文件
+			1. 本地文本
+				<script src=""></script>
+			2. 网络文件引入
+				<script scr="url"></script>
+			注意：如果想使用jQuery语法操作JS，必须将jQuery引入放在JS代码之前
+		2. jQuery 使用
+			1. jQuery 对象 - jQuery / $
+				jQuery 对象是对DOM对象封装之后产生的对象
+				jQuery 对象只能操作jQuery提供的方法，DOM对象也只能操作原生JS提供的方法，不能混用
+			2. jQuery 工厂函数 - $() / jQuery()
+				如果想要获取元素对象，必须通过工厂函数
+				函数中可以传递参数：选择器/DOM对象
+			3. jQuery 对象与 DOM对象互相转换
+				1. DOM --> jQuery 对象
+					et:
+						var h1 = document.getElementsByTagName("h1")[0];
+						var $h1 = $(h1);
+				2. jQuery --> DOM
+					et:
+						var h1 = $h1[0];
+						var h1 = $h1.get(0);

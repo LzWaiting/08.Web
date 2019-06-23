@@ -1,0 +1,72 @@
+jQuery 选择器
+	1. 作用
+		根据选择器获取页面元素，返回值都是由jQuery对象组成的数组
+	2. 语法
+		$("选择器")
+	3. 常用选择器
+		1. 基础选择器
+			1. id 选择器
+				$('#id');
+				返回指定的id的元素对象
+			2. 类选择器
+				$(".className");
+				返回指定类名对象的元素
+			3. 标签选择器
+				$("element");
+				返回指定标签名对应的元素
+			4. 群组选择器
+				$("selector1,selector2,...");
+		2. 层级选择器
+			1. 后代选择器
+				$("selector1 selector2 ...")
+			2. 子代选择器
+				$('selector1 > selector2')
+			3. 相邻兄弟选择器
+				$('selector1 + selector2')
+				匹配紧跟在selector1后满足selector2的一个元素
+			4. 通用兄弟选择器
+				$("selector1 ~ selector2")
+				匹配selector1后所有满足selector2的元素
+		3. 基本过滤选择器
+			过滤选择器需要结合其他选择器一起使用
+			1. :first
+				只匹配一组元素中的第一个元素
+				$("p:first")
+			2. :last
+				匹配一组元素中的最后一个元素
+				$("p:last")
+			3. :not
+				否定筛选，将满足selector选择器的元素都排除在外，匹配剩余元素
+				$(":not(p)")	// 匹配除p元素以外的其余元素
+			4. :odd
+				匹配偶数行对应的元素（0下标开头，偶数行为奇数下标）
+			5. :even
+				匹配奇数行对应的元素（偶数下标）
+			6. :eq(index)
+				匹配下标等于index的元素
+			7. :gt(index)
+				匹配下标大于index的元素
+			8. :lt(index)
+				匹配下标小于index的元素
+		4. 属性选择器
+			根据标签属性匹配元素
+			1. [attribute]
+				匹配包含指定属性的元素
+			2. [attribute=value]
+				匹配属性attribute=value的元素
+			3. [attribute!=value]
+				匹配属性attribute!=value的元素
+			4. [attribute^=value]
+				匹配属性值以value字符开头的元素
+			5. [attribute$=value]
+				匹配属性值以value字符结尾的元素
+			6. [attribute*=value]
+				匹配属性值中包含value字符的元素
+		5. 子元素过滤选择器
+			1. :first-child
+				匹配属于其父元素中的首个子元素
+			2. :last-child
+				匹配属于其父元素中的最后一个子元素
+			3. :nth-child(n)
+				匹配属于其父元素中的第n个子元素,n可以为odd/even,也可以是表达式，比如2n+1...
+			注意：将要匹配的子元素与筛选选择器相结合使用

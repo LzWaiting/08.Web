@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+
+		// var arr = [];
+		// do{
+		// 	var data = prompt("请输入数据");
+		// 	if(data != "exit"){
+		// 		arr[arr.length]=data;
+		// 	}
+		// } while(data != "exit");
+		// for (var i = 0; i < arr.length; i++){
+		// 	console.log(arr[i]);
+		// }
+
+
+		// var arr1 = [12,3,23,14,32,16,0];
+		// var max = arr1[0];
+		// for (var i = 0; i < arr1.length; i++){
+		// 	if (arr1[i] > max){
+		// 		max = arr1[i]
+		// 	}
+		// }		
+		// console.log(max);
+		// console.log(arr1);
+
+
+		// var num;
+		// for (var i = 0; i < arr1.length; i++){
+		// 	for (var j = i + 1; j < arr1.length; j++){
+		// 		if (arr1[i] > arr1[j]){
+		// 			num = arr1[i];
+		// 			arr1[i] = arr1[j];
+		// 			arr1[j] = num;
+		// 		}
+		// 	}
+		// }
+		// console.log(arr1);
+
+
+		// var digit = Number(prompt("输入一个数字"));
+		// var index = -1;
+		// for(var i = 0; i < arr1.length; i++){
+		// 	if (arr1[i] == digit){
+		// 		index = i;
+		// 		break;
+		// 	} 
+		// }
+		// if(index == -1){
+		// 	console.log("不存在");	
+		// } else{
+		// 	console.log("存在，数组下标为"+index);
+		// }
+
+		// 使用异或进行大小比较,从小到大
+		var arr = [23,15,32,12,-10];
+		for(var i = 0;i < arr.length; i++){
+			for (var j = i; j < arr.length; j++){
+				if(arr[i] > arr[j]){
+					arr[i] ^= arr[j];
+					arr[j] ^= arr[i];
+					arr[i] ^= arr[j];
+				}
+			}
+		}
+		alert(arr);
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

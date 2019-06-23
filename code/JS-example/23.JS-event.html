@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		p{
+			width: 200px;
+			height: 200px;
+			background-color: red;
+		}
+	</style>
+	<script type="text/javascript">
+		function fn(){
+			// 内联方式
+			var h1 = document.getElementsByTagName("h1")[0];
+			console.log(h1);
+		}
+		
+		window.onload = function(){
+			// JS绑定onload
+			var h2 = document.getElementsByTagName("h2")[0];
+			console.log(h2);
+		};
+
+	</script>
+</head>
+<body onload="fn();">
+	<div>点击</div>
+	<h1>h1标题文本</h1>
+	<h2>h2标题文本</h2>
+	<p>事件处理函数</p>
+
+	<script type="text/javascript">
+		var div = document.getElementsByTagName("div")[0];
+		div.onclick = function(){
+			alert(this);
+		};
+
+		var p = document.getElementsByTagName("p")[0];
+		p.onmouseover = function(){
+			console.log("鼠标移入");
+		};
+		p.onmouseout = function(){
+			console.log("鼠标移出");
+		};
+		p.onmousemove = function(){
+			console.log("鼠标在元素内移动");
+		};
+
+
+	</script>
+</body>
+</html>

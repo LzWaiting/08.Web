@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script src="jQuery/jquery-1.11.3.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			console.log($('div'));
+		});
+		$().ready(function(){
+			console.log($('div'));
+		});
+		$(function(){
+			console.log($('div'));	
+			$('div').bind('click',function(){
+				alert('div被点击');
+			});	
+			$('h1').click(function(evt){
+				alert('h1被点击');
+				console.log(this);
+				console.log(evt);
+				console.log(evt.offsetX);
+			});
+		});
+	</script>
+</head>
+<body>
+	<div style="width:200px;height:200px;background:red;"></div>
+	<h1 style="width:200px;height:200px;background:green;"></h1>
+</body>
+</html>

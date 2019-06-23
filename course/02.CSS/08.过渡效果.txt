@@ -1,0 +1,40 @@
+过渡效果
+	1. 过渡效果指的是元素CSS属性值在变化时的一种平滑效果
+	2. 语法：
+		1. 指定过渡属性
+			作用：用来指定哪些CSS属性需要添加过渡效果
+			transition-property
+			取值：
+				1. 单个的属性名称
+				et:
+					transition-property:width;
+				2. all 表示但凡能添加过渡效果的属性都添加效果
+				3. 指定多个属性名称，使用“，”隔开
+				4. 能够添加过渡效果的属性
+					1. 所有颜色相关的属性
+					2. 所有取值为数字的属性
+		2. 指定过渡时长
+			作用：表示在多长时间内完成过渡效果
+			属性：transition-duration
+			取值：单位为s(秒)或者是ms（毫秒）的数值，1s=1000ms
+		3. 指定过渡效果的速度时间曲率
+			属性：transition-timing-function
+			作用：设置过渡效果的变化速率
+			取值：
+				1. ease 默认值 慢速开始，中间快速变快，慢速结束
+				2. linear 匀速变化
+				3. ease-in 慢速开始，加速结束
+				4. ease-out 快速开始，减速结束
+				5. ease-in-out 慢速的开始和结束，中间过程先加速后减速
+		4. 指定过渡延迟
+			属性：transition-delay
+			作用：延迟几秒之后再发生过渡效果
+			取值：s/ms为单位的数值
+		5. 使用注意：
+			1. 其他属性都可以省略（transition-property/transition-timing-function/transition-delay），过渡时长transition-duration必须设置，否则CSS样式的变化就又成瞬时变化，没有过渡效果了
+			2. 使用过渡相关的属性是，要定义在元素的默认样式中，不能写在伪类选择器中，会影响过渡效果
+			练习：见exercise/exercise4.html
+		6. 属性简写
+			属性：transition
+			取值：property duration timing-function delay
+			注意：duration必须写
